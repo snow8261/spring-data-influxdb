@@ -64,6 +64,13 @@ public class InfluxDBTemplate<T> extends InfluxDBAccessor implements InfluxDBOpe
   }
 
   @Override
+  public void setDatabase() {
+    final String database = getDatabase();
+    getConnection().setDatabase(database);
+  }
+
+
+  @Override
   @SuppressWarnings("unchecked")
   public void write(final T... payload)
   {

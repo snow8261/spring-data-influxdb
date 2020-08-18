@@ -31,6 +31,11 @@ public interface InfluxDBOperations<T>
   void createDatabase();
 
   /**
+   * Set the Database.
+   */
+  void setDatabase();
+
+  /**
    * Write a single measurement to the database.
    *
    * @param payload the measurement to write to
